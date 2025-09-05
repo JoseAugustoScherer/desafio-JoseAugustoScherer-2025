@@ -1,21 +1,21 @@
 class AbrigoAnimais {
 
-  constructor() {
-    this.animais = {
-      'Rex'  : { tipo: 'cão',    brinquedos: [ 'RATO', 'BOLA' ] },
-      'Mimi' : { tipo: 'gato',   brinquedos: [ 'BOLA', 'LASER' ] },
-      'Fofo' : { tipo: 'gato',   brinquedos: [ 'NOVELO', 'RATO' ] },
-      'Zero' : { tipo: 'gato',   brinquedos: [ 'RATO', 'BOLA' ] },
-      'Bola' : { tipo: 'cão',    brinquedos: [ 'CAIXA', 'NOVELO' ] },
-      'Bebe' : { tipo: 'cão',    brinquedos: [ 'LASER', 'RATO', 'BOLA' ] },
-      'Loco' : { tipo: 'jabuti', brinquedos: [ 'SKATE', 'RATO' ] }
+  encontraPessoas( brinquedosPessoa1, brinquedosPessoa2, ordemAnimais ) {
+    const animais = {
+      'Rex' : [ 'RATO',  'BOLA' ], 
+      'Mimi': [ 'BOLA',  'LASER' ],
+      'Fofo': [ 'BOLA',  'RATO', 'LASER' ], 
+      'Zero': [ 'RATO',  'BOLA' ],
+      'Bola': [ 'CAIXA', 'NOVELO' ], 
+      'Bebe': [ 'LASER', 'RATO', 'BOLA' ],
+      'Loco': [ 'SKATE', 'RATO' ]
     };
 
-    this.brinquedosValidos = [ 'RATO', 'BOLA', 'LASER', 'CAIXA', 'NOVELO', 'SKATE' ];
+    const p1    = brinquedosPessoa1.split( ',' );
+    const p2    = brinquedosPessoa2.split( ',' );
+    const ordem = ordemAnimais.split( ',' );
     
   }
-
-  encontraPessoas( brinquedosPessoa1, brinquedosPessoa2, ordemAnimais ) {}
 }
 
 export { AbrigoAnimais as AbrigoAnimais };
