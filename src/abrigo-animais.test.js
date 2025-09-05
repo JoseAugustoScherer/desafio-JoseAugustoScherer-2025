@@ -8,6 +8,12 @@ describe('Abrigo de Animais', () => {
     expect(resultado.lista).toBeFalsy();
   });
 
+  test('Deve validar um animal inválido', () => {
+    const resultado = new AbrigoAnimais().encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'AnimalInvalido');
+    expect(resultado.erro).toBe('Animal inválido');
+    expect(resultado.lista).toBeFalsy();
+  });
+
   test('Deve encontrar pessoa para um animal', () => {
     const resultado = new AbrigoAnimais().encontraPessoas(
       'RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
