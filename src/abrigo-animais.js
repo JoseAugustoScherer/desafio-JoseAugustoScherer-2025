@@ -11,9 +11,9 @@ class AbrigoAnimais {
       'Loco': [ 'SKATE', 'RATO' ]
     };
 
-    const p1    = brinquedosPessoa1.split( ',' );
-    const p2    = brinquedosPessoa2.split( ',' );
-    const ordem = ordemAnimais.split( ',' );
+    const p1    = corrigeEntradaBrinquedos( brinquedosPessoa1 );
+    const p2    = corrigeEntradaBrinquedos( brinquedosPessoa2 );
+    const ordem = corrigeEntradaAnimais( ordemAnimais );
 
     for ( let animal of ordem ) {
       if ( !animais[ animal ] ) return { erro: 'Animal inválido' };
@@ -52,6 +52,18 @@ class AbrigoAnimais {
       return true;
     }
   }
+}
+
+function corrigeEntradaBrinquedos( brinquedos ) {
+  return brinquedos.split( ',' )
+    .map( b => b.trim() )
+    .filter( b => b.length > 0 );
+}
+
+function corrigeEntradaAnimais( animais ) {
+  return animais.split(',')
+    .map( a => a.trim() )
+    .filter( a => a.length > 0 );
 }
 
 export { AbrigoAnimais as AbrigoAnimais };
