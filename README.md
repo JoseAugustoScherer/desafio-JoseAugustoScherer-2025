@@ -57,5 +57,10 @@ Saída
   erro: 'Animal inválido'
 }
 ```
+
+<p align="center">
+  <img alt="projeto DEV Links" src=".github/Captura de tela 2025-09-06 182915.png" width="100%">
+</p>
+
 # desafio-JoseAugustoScherer-2025
 Desafio DB
