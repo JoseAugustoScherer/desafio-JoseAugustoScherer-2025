@@ -42,17 +42,10 @@ class AbrigoAnimais {
     
     return { lista: resultado.sort() };
 
-    function temNaOrdem( lista, necessarios ) {
-      let pos = 0;
-      for ( let item of necessarios ) {
-        pos = lista.indexOf( item, pos );
-        if ( pos === -1 ) return false;
-        pos++;
-      }
-      return true;
-    }
   }
 }
+
+// Funções auxiliares
 
 function corrigeEntradaBrinquedos( brinquedos ) {
   return brinquedos.split( ',' )
@@ -64,6 +57,16 @@ function corrigeEntradaAnimais( animais ) {
   return animais.split(',')
     .map( a => a.trim() )
     .filter( a => a.length > 0 );
+}
+
+function temNaOrdem( lista, necessarios ) {
+  let pos = 0;
+    for ( let item of necessarios ) {
+      pos = lista.indexOf( item, pos );
+      if ( pos === -1 ) return false;
+      pos++;
+    }
+  return true;
 }
 
 export { AbrigoAnimais as AbrigoAnimais };
